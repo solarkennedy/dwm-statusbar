@@ -106,12 +106,11 @@ int main(int argc, char **argv)
             } else
                 timer++;
         } else {
-            snprintf(stat, STRSZ, "%s | %d | %s | %c%0.1f%% | %s",
-                     la,
+            snprintf(stat, STRSZ, "Volume: %d  |  Wifi Link: %s  |  Battery: %0.1f%% (%c)  |  %s",
                      vol,
                      lnk,
-                     status[st],
                      MIN(bat, 100), dt);
+                     status[st],
             set_status(stat);
             timer = 0;  /* reseting the standby timer */
         }
